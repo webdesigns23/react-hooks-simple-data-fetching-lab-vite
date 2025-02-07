@@ -1,26 +1,29 @@
 {
   "name": "react-hooks-simple-data-fetching-lab",
+  "type": "module",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-scripts": "^5.0.1",
-    "whatwg-fetch": "^3.6.2"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@learn-co-curriculum/jest-learn-reporter": "^0.1.0",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "mocha": "^8.2.1",
-    "msw": "^0.24.1"
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.2.0",
+    "@testing-library/user-event": "^14.6.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "jsdom": "^26.0.0",
+    "msw": "^2.7.0",
+    "vite": "^5.4.1",
+    "vitest": "^3.0.5",
+    "whatwg-fetch": "^3.6.20"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "echo \".results.json\" && react-scripts test --reporters=@learn-co-curriculum/jest-learn-reporter --reporters=default --watchAll",
-    "eject": "react-scripts eject"
+    "dev": "vite",
+    "build": "vite build",
+    "test": "vitest",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
   "eslintConfig": {
     "extends": [
