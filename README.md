@@ -32,8 +32,12 @@ the tests in this lab:
   rendered
 - After receiving a response from the API, show the dog image in an `<img>` tag,
   with the `alt` attribute set to "A Random Dog".
+  - For the test suite to work properly, this should be the only `<img>` tag in 
+  the application .
 - Create a `<button>` tag that, on click, fetches a new dog image and updates the 
   dog image displayed.
+  - For the test suite to work properly, this should be the only `<button>` tag in 
+  the application .
 
 ## Lab Instructions
 ### 1. Define the Problem
@@ -41,12 +45,8 @@ the tests in this lab:
 * Allow the user to change the dog image by a button click.
 * Display a loading message for the user while waiting for API requests.
 ### 2. Determine the Design
-* Determine Component Tree (the below is an example, you can use this or build it differently)
-```
-└── App
-    ├── Header
-    └── RandomDog
-```
+* Determine Component Tree
+  * At minimum, you'll need an App component for the test suite
 * Determine state and props needed for each component
 ### 3. Develop the Code
 * Open React application in browser
