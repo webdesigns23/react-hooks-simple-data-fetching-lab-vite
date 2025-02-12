@@ -4,13 +4,16 @@ import App from '../components/App';
 
 const mockDogResponses = [{
   message: 'https://images.dog.ceo/breeds/hound-afghan/n02088094_1003.jpg',
-  status: 'success',
+  status: 200,
+  ok: true
 }, {
   message: 'https://images.dog.ceo/breeds/terrier-sealyham/n02095889_5221.jpg',
-  status: 'success'
+  status: 200,
+  ok: true
 }, {
   message: "https://images.dog.ceo/breeds/pinscher-miniature/n02107312_7391.jpg",
-  status: "success"
+  status: 200,
+  ok: true
 }];
 
 const randomIndex = Math.floor(Math.random() * 3);
@@ -18,6 +21,8 @@ const randomIndex = Math.floor(Math.random() * 3);
 global.fetch = vi.fn(() =>
   Promise.resolve({
     json: () => Promise.resolve(mockDogResponses[randomIndex]),
+    ok: true,
+    status: 200
   })
 );
 
@@ -47,10 +52,13 @@ describe('React Simple Data Fetching Lab', () => {
 
     const newMockDogResponse = {
       message: 'https://images.dog.ceo/breeds/retriever-golden/n02099601_5004.jpg',
-      status: 'success',
+      status: 200,
+      ok: true
     };
     fetch.mockResolvedValueOnce({
       json: () => Promise.resolve(newMockDogResponse),
+      ok: true,
+      status: 200
     });
 
     const button = screen.getByRole('button');
@@ -73,6 +81,8 @@ describe('React Simple Data Fetching Lab', () => {
 
     fetch.mockResolvedValueOnce({
       json: () => Promise.resolve(mockDogResponses[randomIndex]),
+      status: 200,
+      ok: true
     });
 
     const button = screen.getByRole('button');
